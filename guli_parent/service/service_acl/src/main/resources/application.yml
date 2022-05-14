@@ -1,0 +1,43 @@
+server.port:
+  8009
+spring.application.name:
+  service-acl
+# mysql数据库连接
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.211.132:3306/guli?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: 123456
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+
+spring.redis.host:
+  192.168.211.132
+spring.redis.port:
+  6379
+spring.redis.database=:
+  0
+spring.redis.timeout:
+  1800000
+spring.redis.lettuce.pool.max-active:
+  20
+spring.redis.lettuce.pool.max-wait:
+  -1
+#最大阻塞等待时间(负数表示没限制)
+spring.redis.lettuce.pool.max-idle:
+  5
+spring.redis.lettuce.pool.min-idle:
+  0
+#最小空闲
+#返回json的全局时间格式
+spring.jackson.date-format:
+  yyyy-MM-dd HH:mm:ss
+spring.jackson.time-zone:
+  GMT+8
+mybatis-plus.configuration.log-impl:
+  org.apache.ibatis.logging.stdout.StdOutImpl
+mybatis-plus.mapper-locations:
+  classpath:com/atguigu/aclservice/mapper/xml/*.xml

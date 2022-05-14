@@ -1,0 +1,44 @@
+# 服务端口
+server.port:
+  8001
+# 服务名
+spring.application.name:
+  service-edu
+# mysql数据库连接
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.211.132:3306/guli?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: 123456
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+# mybatis日志
+mybatis-plus.configuration.log-impl:
+  org.apache.ibatis.logging.stdout.StdOutImpl
+# 日志级别
+logging.level.root:
+  INFO
+# 环境设置：dev、test、prod
+spring.profiles.active:
+  dev
+#返回json的全局时间格式
+spring.jackson.date-format=yyyy-MM-dd HH:
+  mm:ss
+spring.jackson.time-zone:
+  GMT+8
+mybatis-plus:
+  mapper-locations: classpath:/com/atguigu/eduservice/mapper/xml/*.xml
+#开启熔断机制(新版本)
+feign:
+  circuitbreaker:
+    enabled: true
+
+#开启熔断机制(旧版本)
+#feign.hystrix.enabled:
+#  true
+# 设置hystrix超时时间，默认1000ms
+hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds:
+  6000

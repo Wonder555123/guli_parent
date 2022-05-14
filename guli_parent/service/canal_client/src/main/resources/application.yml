@@ -1,0 +1,42 @@
+# 服务端口
+server.port:
+  10000
+spring.application.name:
+  canal-client
+
+# 环境设置：dev、test、prod
+spring.profiles.active:
+  dev
+
+# mysql数据库连接
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.211.132:3306/guli?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: 123456
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+
+#返回json的全局时间格式
+spring.jackson.date-format:
+  yyyy-MM-dd HH:mm:ss
+spring.jackson.time-zone:
+  GMT+8
+
+#配置mapper xml文件的路径
+mybatis-plus.mapper-locations:
+  classpath:com/atguigu/com.atguigu.staservice/mapper/xml/*.xml
+
+#mybatis日志
+mybatis-plus.configuration.log-impl:
+  org.apache.ibatis.logging.stdout.StdOutImpl
+
+canal:
+  client:
+    instances:
+      example:
+        host: 192.168.211.132
+        port: 11111
