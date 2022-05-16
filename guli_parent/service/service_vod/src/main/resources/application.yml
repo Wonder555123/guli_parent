@@ -15,9 +15,9 @@ spring.profiles.active:
 #阿里云 vod
 #不同的服务器，地址不同
 aliyun.vod.file.keyid:
-  LTAI5tJyxde5CebpqPz3Pm49
+  111111
 aliyun.vod.file.keysecret:
-  rwcSDTWqpRc475dFyqvAsOg0SBBExQ
+  111111
 # 最大上传单个文件大小：默认1M
 spring.servlet.multipart.max-file-size:
   1024MB
