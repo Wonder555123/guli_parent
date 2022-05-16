@@ -17,9 +17,9 @@ spring.profiles.active:
 aliyun.oss.file.endpoint:
   oss-cn-shanghai.aliyuncs.com
 aliyun.oss.file.keyid:
-  LTAI5tJyxde5CebpqPz3Pm49
+  1111
 aliyun.oss.file.keysecret:
-  rwcSDTWqpRc475dFyqvAsOg0SBBExQ
+  11111
 #bucket可以在控制台创建，也可以使用java代码创建
 aliyun.oss.file.bucketname:
   ccclovelmm
